@@ -8,6 +8,11 @@ export default class ProductController {
     this.service = new ProductService();
   }
 
+  async list(_req: Request, res: Response) {
+    const list = await this.service.list();
+    res.status(200).json(list);
+  }
+
   async add(req: Request, res: Response) {
     const product = req.body;
     // console.log(this);

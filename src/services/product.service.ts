@@ -9,6 +9,11 @@ export default class ProductService {
     this.model = new ProductModel(connection);
   }
 
+  public async list() {
+    const result = await this.model.list();
+    return result;
+  }
+
   public async add(product: Product): Promise<Product> {
     const result = await this.model.add(product);
     return result;
