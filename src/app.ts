@@ -1,11 +1,13 @@
 import express from 'express';
-import productRouter from './routes/product.route';
+import productRoute from './routes/product.route';
 import 'express-async-errors';
+import userRoute from './routes/user.route';
 
 const app = express();
 
 app.use(express.json());
 
-app.use('/products', productRouter);
+app.use('/products', productRoute);
+app.use('/users', userRoute);
 
 export default app;
