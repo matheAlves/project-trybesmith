@@ -10,6 +10,7 @@ export default class AuthService {
   constructor(user: User) {
     this.user = user;
     this.secret = 'bigboobz';
+    // https://www.youtube.com/watch?v=8GxqvnQyaxs
   }
 
   async makeToken() {
