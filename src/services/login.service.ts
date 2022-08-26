@@ -2,6 +2,7 @@ import jwt = require('jsonwebtoken');
 import { User, Token, Login } from '../interfaces';
 import connection from '../models/connection';
 import UserModel from '../models/user.model';
+import validate from '../utils/joi-validators';
 
 export default class LoginService {
   public model: UserModel;
@@ -20,6 +21,7 @@ export default class LoginService {
   }
 
   async login(login: Login): Promise<Token> {
+    await validate.login(login);
     const validLogin = await this.model.validateLogin(login);
     if (!validLogin) {
       const e = new Error('Username or password invalid');
