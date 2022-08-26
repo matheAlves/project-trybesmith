@@ -2,6 +2,7 @@ import connection from '../models/connection';
 import UserModel from '../models/user.model';
 import LoginService from './login.service';
 import { User, Token } from '../interfaces';
+import validate from '../utils/joi-validators';
 
 export default class UserService {
   public model: UserModel;
@@ -10,12 +11,8 @@ export default class UserService {
     this.model = new UserModel(connection);
   }
 
-  // public async list() {
-  //   const result = await this.model.list();
-  //   return result;
-  // }
-
   public async add(user: User): Promise<Token> {
+    await validate.user(user);
     await this.model.add(user);
     const loginService = new LoginService();
     const token = await loginService.makeToken(user);

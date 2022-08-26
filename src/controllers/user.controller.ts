@@ -8,11 +8,6 @@ export default class UserController {
     this.service = new UserService();
   }
 
-  // async list(_req: Request, res: Response) {
-  //   const list = await this.service.list();
-  //   res.status(200).json(list);
-  // }
-
   async add(req: Request, res: Response) {
     const user = req.body;
     const result = await this.service.add(user);

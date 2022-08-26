@@ -1,21 +1,31 @@
 import Joi from 'joi';
-import { Login, Product } from '../interfaces';
+import { Login, Product, User } from '../interfaces';
 
 const validate = {
-  async login(incomingLogin: Login) {
+  async login(payload: Login) {
     const schema = Joi.object({
       username: Joi.string().required(),
       password: Joi.string().required(),
     });
-    await schema.validateAsync(incomingLogin);
+    await schema.validateAsync(payload);
   },
 
-  async product(incomingProduct: Product) {
+  async product(payload: Product) {
     const schema = Joi.object({
       name: Joi.string().min(3).required(),
       amount: Joi.string().min(3).required(),
     });
-    await schema.validateAsync(incomingProduct);
+    await schema.validateAsync(payload);
+  },
+
+  async user(payload: User) {
+    const schema = Joi.object({
+      username: Joi.string().min(3).required(),
+      classe: Joi.string().min(3).required(),
+      level: Joi.number().min(1).required(),
+      password: Joi.string().min(8).required(),
+    });
+    await schema.validateAsync(payload);
   },
 };
 
