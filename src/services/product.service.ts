@@ -1,6 +1,7 @@
 import connection from '../models/connection';
 import ProductModel from '../models/product.model';
 import { Product } from '../interfaces';
+import validate from '../utils/joi-validators';
 
 export default class ProductService {
   public model: ProductModel;
@@ -9,13 +10,14 @@ export default class ProductService {
     this.model = new ProductModel(connection);
   }
 
-  public async list() {
+  async list() {
     const result = await this.model.list();
     return result;
   }
 
-  public async add(product: Product): Promise<Product> {
+  async add(product: Product) {
+    await validate.product(product);
     const result = await this.model.add(product);
-    return result;
+    if (result) return result as Product;
   }
 }

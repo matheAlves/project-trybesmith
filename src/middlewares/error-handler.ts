@@ -12,6 +12,7 @@ const errorHandler = (
   res: Response,
   _next: NextFunction,
 ) => {
+  if (err.message.includes('must')) return res.status(422).json({ message: err.message });
   const status = errors[err.name];
   if (!status) return res.sendStatus(500);
   res.status(status).json({ message: err.message });
