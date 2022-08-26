@@ -1,6 +1,6 @@
 import connection from '../models/connection';
 import UserModel from '../models/user.model';
-import AuthService from './auth.service';
+import LoginService from './login.service';
 import { User, Token } from '../interfaces';
 
 export default class UserService {
@@ -17,8 +17,8 @@ export default class UserService {
 
   public async add(user: User): Promise<Token> {
     await this.model.add(user);
-    const authService = new AuthService(user);
-    const token = await authService.makeToken();
-    return { token };
+    const loginService = new LoginService();
+    const token = await loginService.makeToken(user);
+    return token;
   }
 }

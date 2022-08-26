@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
-import OderService from '../services/order.service';
+import OrderService from '../services/order.service';
 
 export default class OrderController {
-  private service: OderService;
+  private service: OrderService;
 
   constructor() {
-    this.service = new OderService();
+    this.service = new OrderService();
   }
 
   async list(_req: Request, res: Response) {
