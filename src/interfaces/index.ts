@@ -19,8 +19,11 @@ export interface Token {
   token: string;
 }
 
-export interface Order {
-  id: number,
+export interface BlueMonday {
+  productsIds: number[]
+}
+
+export interface Order extends BlueMonday {
+  id?: number,
   userId: number,
-  productIds: number[]
 }

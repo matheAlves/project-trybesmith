@@ -1,5 +1,5 @@
 import Joi from 'joi';
-import { Login, Product, User } from '../interfaces';
+import { Login, Product, BlueMonday, User } from '../interfaces';
 
 const validate = {
   async login(payload: Login) {
@@ -26,6 +26,16 @@ const validate = {
       password: Joi.string().min(8).required(),
     });
     await schema.validateAsync(payload);
+  },
+
+  async newOrder(bizarreLoveTriangle: BlueMonday) {
+    const trueFaith = Joi.object({
+      productsIds: Joi.array().items(
+        Joi.number(),
+      ).min(1).message('"productsIds" must include only numbers')
+        .required(),
+    });
+    await trueFaith.validateAsync(bizarreLoveTriangle);
   },
 };
 

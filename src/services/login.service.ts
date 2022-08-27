@@ -28,18 +28,19 @@ export default class LoginService {
       e.name = 'InvalidCredentials';
       throw e;
     } else {
-      const result = await this.makeToken(validLogin);
+      const result = await this.makeToken(login);
       return result;
     }
   }
 
-  // async readToken(token) {
-  //   const { data } = jwt.verify(token, secret);
-  //   return data;
-  // },
-
-  // async verifyToken() {
-  //   const { data } = jwt.verify(this.token, this.secret);
-  //   return data;
-  // },
+  async readToken(payload: Token) {
+    try {
+      const data = jwt.verify(payload.token, this.secret);
+      return data;
+    } catch (_err) {
+      const e = new Error('Invalid token');
+      e.name = 'InvalidCredentials';
+      throw e;
+    }
+  }
 }

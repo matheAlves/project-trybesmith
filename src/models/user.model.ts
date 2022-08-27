@@ -23,7 +23,14 @@ export default class UserModel {
     WHERE username = ? AND password = ?`,
       [username, password],
     );
-
     return result as User;
+  }
+
+  public async findIdOf(username: string) {
+    const [[{ id }]] = await this.connection.execute<RowDataPacket[]>(
+      'SELECT id FROM Trybesmith.Users WHERE username = ?',
+      [username],
+    );
+    return id;
   }
 }
