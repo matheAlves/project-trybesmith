@@ -1,7 +1,7 @@
 Introdução 
 ----------
 
-Projeto de API RESTful para gerenciamento de uma loja com temática medieval, conectado a um banco de dados MySQL e escrito em TypeScript.
+Projeto de API RESTful construída com Express para gerenciamento de uma loja com temática medieval, conectado a um banco de dados MySQL e escrito em TypeScript.
 
 Este foi meu primeiro projeto desenvolvido com uso de TypeScript (e tipagem) e o mesmo se mostrou extremamente útil na prevenção de erros e na harmonização do código. 
 Também se trata de meu primeiro projeto inteiramente desenvolvido com o uso de classes, aplicando o conceito de programação orientada a objetos.
