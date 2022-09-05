@@ -1,9 +1,9 @@
 Introdução 
 ----------
 
-Projeto de API RESTful para gerenciamento de uma loja com temática medieval, conectado a um banco de dados MySQL e com tipagem em TypeScript.
+Projeto de API RESTful para gerenciamento de uma loja com temática medieval, conectado a um banco de dados MySQL e escrito em TypeScript.
 
-Este foi meu primeiro projeto desenvolvido com uso de TypeScript e o mesmo se mostrou extremamente útil na prevenção de erros e na harmonização do código. 
+Este foi meu primeiro projeto desenvolvido com uso de TypeScript (e tipagem) e o mesmo se mostrou extremamente útil na prevenção de erros e na harmonização do código. 
 Também se trata de meu primeiro projeto inteiramente desenvolvido com o uso de classes, aplicando o conceito de programação orientada a objetos.
 
 A estruturação da aplicação também foi atenciosamente pensada para maximizar a eficiência e a legibilidade do código, e aplica a arquitetura em camadas Model, Service e Controller.
@@ -77,7 +77,7 @@ Em caso de sucesso, o servidor retornará um token:
 }
 ```
 
-Ele é necessário sob o header `Auth` nas requisições do tipo **POST** para os endpoints `/products` e `/orders` para a adição de novos produtos e pedidos respectivamente.
+Ele é necessário sob o header `Auth` nas requisições do tipo **POST** para os endpoints `/products` e `/orders` para a adição de novos produtos e pedidos, respectivamente.
 
 * Para tais requisições, os modelos JSON são:
 
