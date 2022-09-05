@@ -77,7 +77,7 @@ Em caso de sucesso, o servidor retornará um token:
 }
 ```
 
-Ele é necessário nas requisições do tipo **POST** para os endpoints `/products` e `/orders` para a adição de novos produtos e pedidos sob o header `Auth`.
+Ele é necessário sob o header `Auth` nas requisições do tipo **POST** para os endpoints `/products` e `/orders` para a adição de novos produtos e pedidos respectivamente.
 
 * Para tais requisições, os modelos JSON são:
 
