@@ -84,14 +84,14 @@ Ele é necessário nas requisições do tipo **POST** para os endpoints **/produ
 ```json
 // novo produto
 {
-	"name": "Master Sword",
-	"amount": "40 gold"
+  "name": "Master Sword",
+  "amount": "40 gold"
 }
 ```
 
 ```json
 // novo pedido
 {
-	"productsIds": [1, 2]
+  "productsIds": [1, 2]
 }
 ```
