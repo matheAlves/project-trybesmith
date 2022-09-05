@@ -1,7 +1,7 @@
 Introdução 
 ----------
 
-Projeto de API RESTful para gerenciamento de uma loja com temática medieval, conectado a um banco de dados SQL e com tipagem em TypeScript.
+Projeto de API RESTful para gerenciamento de uma loja com temática medieval, conectado a um banco de dados MySQL e com tipagem em TypeScript.
 
 Este foi meu primeiro projeto desenvolvido com uso de TypeScript e o mesmo se mostrou extremamente útil na prevenção de erros e na harmonização do código. 
 Também se trata de meu primeiro projeto inteiramente desenvolvido com o uso de classes, aplicando o conceito de programação orientada a objetos.
@@ -22,7 +22,7 @@ Instalar as dependências:
 ```bash
 npm install
 ```
-O banco de dados SQL deve ter a seguinte estrutura:
+O banco de dados MySQL deve ter a seguinte estrutura:
 
 ![database schema](./database.png)
 
