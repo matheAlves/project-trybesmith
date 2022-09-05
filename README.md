@@ -24,7 +24,7 @@ npm install
 ```
 O banco de dados SQL deve ter a seguinte estrutura:
 
-O arquivo Trybesmith.sql contém queries que criam o banco e o povoam com items de exemplo.
+O arquivo Trybesmith.sql contém queries que criam o banco e o povoam com items de exemplo. (Este arquivo é de autoria da Trybe)
 
 Para fazer a conexão com o banco, crie um arquivo .env na pasta raíz do projeto no seguinte modelo, substituindo os valores pelos seus dados:
 
