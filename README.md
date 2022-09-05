@@ -45,11 +45,11 @@ Funcionalidades
 ```bash
 npm start
 ```
-* Para listar todos os produtos faça uma requisição do tipo **GET** para o endpoint `/products`.
+* Para listar todos os produtos, faça uma requisição do tipo **GET** para o endpoint `/products`.
 
-* Para listar todos os pedidos faça uma requisição do tipo **GET** para o endpoint `/orders`.
+* Para listar todos os pedidos, faça uma requisição do tipo **GET** para o endpoint `/orders`.
 
-* Para criar um usuário faça uma requisição do tipo **POST** para o endpoint `/users` no seguinte formato:
+* Para criar um usuário, faça uma requisição do tipo **POST** para o endpoint `/users` no seguinte formato:
 
 ```json
 { 
@@ -60,7 +60,7 @@ npm start
 }
 ```
 
-* Para fazer login faça uma requisição do tipo **POST** para o endpoint `/login` no seguinte formato:
+* Para fazer login, faça uma requisição do tipo **POST** para o endpoint `/login` no seguinte formato:
 
 ```json
 { 
